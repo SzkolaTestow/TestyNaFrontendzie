@@ -1,0 +1,30 @@
+{
+  "name": "testynafrontendzie",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.tsx",
+  "scripts": {
+    "start": "parcel serve ./src/index.html",
+    "build": "parcel build ./src/index.html"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SzkolaTestow/TestyNaFrontendzie.git"
+  },
+  "author": "pSiemieniuk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SzkolaTestow/TestyNaFrontendzie/issues"
+  },
+  "homepage": "https://github.com/SzkolaTestow/TestyNaFrontendzie#readme",
+  "devDependencies": {
+    "@types/react": "^17.0.8",
+    "@types/react-dom": "^17.0.5",
+    "parcel": "^2.0.0-beta.3.1",
+    "typescript": "^4.3.2"
+  }
+}
