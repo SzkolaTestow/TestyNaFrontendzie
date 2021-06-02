@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.tsx",
   "scripts": {
-    "start": "parcel serve ./src/index.html",
-    "build": "parcel build ./src/index.html"
+    "start": "parcel serve public/index.html",
+    "build": "parcel build public/index.html",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "e2e": "cypress open"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
@@ -35,12 +38,16 @@
   },
   "homepage": "https://github.com/SzkolaTestow/TestyNaFrontendzie#readme",
   "devDependencies": {
+    "@parcel/transformer-image": "^2.0.0-nightly.1981",
+    "@parcel/transformer-svg-react": "^2.0.0-nightly.1739",
+    "@parcel/transformer-svgo": "^2.0.0-nightly.1739",
     "@types/react": "^17.0.8",
     "@types/react-dom": "^17.0.5",
     "@types/react-router-dom": "^5.1.7",
     "@types/styled-components": "^5.1.9",
     "@typescript-eslint/eslint-plugin": "^4.23.0",
     "eslint": "^7.26.0",
+    "prettier": "^2.3.0",
     "eslint-config-airbnb-typescript": "^12.3.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-cypress": "^2.11.3",
