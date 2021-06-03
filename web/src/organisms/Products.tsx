@@ -1,9 +1,22 @@
-import React from "react";
-import { getProducts } from "../mocks/getProducts";
+import React, { useState } from "react";
+import { AxiosResponse } from "axios";
 import { ProductElement } from "../molecules/ProductElement";
+import Loader from "../atoms/Loader";
+import { Product } from "../types/Product";
+import { axios } from "../api/axios";
+import { endpoints } from "../api/endpoints";
 
 export const Products = (): JSX.Element => {
-  const products = getProducts();
+  const [products, setProducts] = useState<Product[] | null>(null);
+
+  axios(endpoints.getProducts).then((res: AxiosResponse<any>) => {
+    const { data } = res;
+    if (data) {
+      setProducts(data.data);
+    }
+  });
+
+  if (!products) return <Loader />;
 
   return (
     <div>

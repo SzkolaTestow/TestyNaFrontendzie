@@ -5,19 +5,19 @@ export const getProducts = (): Product[] => {
     {
       id: "1",
       name: "Buty sportowe",
-      manufacturer: "Adidas",
+      brand: "Adidas",
       price: 2500,
     },
     {
       id: "2",
       name: "Koszulka sportowa",
-      manufacturer: "Nike",
+      brand: "Nike",
       price: 5000,
     },
     {
       id: "3",
       name: "Spodnie dresowe",
-      manufacturer: "Reebok",
+      brand: "Reebok",
       price: 8900,
     },
   ];

@@ -32,7 +32,7 @@ export const ProductElement = ({
   return (
     <MainContainer>
       <NameContainer>
-        {product.name} - {product.manufacturer}
+        {product.name} - {product.brand}
       </NameContainer>
       <PriceContainer>{displayPrice(product.price)}</PriceContainer>
       {inCart ? (
