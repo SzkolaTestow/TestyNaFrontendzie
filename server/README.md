@@ -11,14 +11,32 @@ This project uses [Feathers](http://feathersjs.com). An open source web framewor
 Getting up and running is as easy as 1, 2, 3.
 
 1. Make sure you have [NodeJS](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed.
-2. Install your dependencies
+2.  Install mongodb-community
+3. Install your dependencies
 
     ```
-    cd path/to/tnf-server
+    cd server
     npm install
     ```
+4. Start server
+    ```
+    brew services start mongodb-community@4.4
+    ```
+   
+    and *Stop server*
+    ```
+    brew services stop mongodb-community@4.4
+    ```
 
-3. Start your app
+  You can use MongoDB Compass to manage your local mongoDB server.
+
+5. Run database migration for your first run.
+
+   ```
+   migrate 
+   ```
+
+6. Start your app
 
     ```
     npm start

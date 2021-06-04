@@ -9,19 +9,21 @@ import { endpoints } from "../api/endpoints";
 export const Products = (): JSX.Element => {
   const [products, setProducts] = useState<Product[] | null>(null);
 
-  axios(endpoints.getProducts).then((res: AxiosResponse<any>) => {
-    const { data } = res;
-    if (data) {
-      setProducts(data.data);
-    }
-  });
+  if (!products) {
+    axios(endpoints.getProducts).then((res: AxiosResponse<any>) => {
+      const { data } = res;
+      if (data) {
+        setProducts(data.data);
+      }
+    });
+  }
 
   if (!products) return <Loader />;
 
   return (
     <div>
       {products.map((prod) => {
-        return <ProductElement key={prod.id} product={prod} />;
+        return <ProductElement key={prod._id} product={prod} />;
       })}
     </div>
   );
